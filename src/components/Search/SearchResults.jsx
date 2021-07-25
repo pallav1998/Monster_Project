@@ -8,6 +8,7 @@ import { PaginationDiv } from "./PaginationDiv";
 import { Filters } from "./Filters";
 import { SearchLinks } from "./SearchLinks";
 import { Nav } from "../body/nav";
+import { Footer } from "../body/footer.jsx";
 
 const SearchArea = styled.div`
   display: flex;
@@ -16,7 +17,7 @@ const SearchArea = styled.div`
 
 const SearchBarDiv = styled.div`
   margin: 1rem 0;
-  padding: 0.5rem 3rem;
+  padding: 2rem 3rem;
   background-color: #e8e8e8;
 `;
 
@@ -51,7 +52,7 @@ export default function SearchResults() {
 
   return (
     <>
-    <Nav/>
+      <Nav />
       <SearchBarDiv>
         <SearchBar show={true} />
       </SearchBarDiv>
@@ -77,6 +78,8 @@ export default function SearchResults() {
         )}
         <SearchLinks />
       </SearchArea>
+      <hr/>
+      <Footer/>
     </>
   );
 }

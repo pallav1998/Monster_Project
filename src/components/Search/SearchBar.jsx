@@ -9,7 +9,7 @@ import { GiTwoCoins } from "react-icons/gi";
 const InputDiv = styled.div`
   display: flex;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 60px;
   width: 100%;
   div {
     display: flex;
