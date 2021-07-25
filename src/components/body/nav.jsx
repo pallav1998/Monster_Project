@@ -6,9 +6,17 @@ import { AiOutlineDashboard } from "react-icons/ai";
 import { FaBell, FaUserCircle } from "react-icons/fa";
 import { RiUser3Line } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
 export function Nav() {
   const [login, setLogin] = React.useState(false);
+  const x = JSON.parse(localStorage.getItem("loggedin"));
+  console.log(x);
+
+  useEffect(() => {
+    if (x === "1") setLogin(true);
+    else setLogin(false);
+  }, []);
 
   const [show, setShow] = React.useState(0);
 
@@ -18,6 +26,9 @@ export function Nav() {
   };
   const hide = () => {
     setShow(0);
+  };
+  const changeLogin = () => {
+    //   setLogin(true);
   };
 
   return (
@@ -177,8 +188,8 @@ export function Nav() {
                 </>
               ) : (
                 <li className={styles.login}>
-                  <NavLink to={'/login'}>
-                    <button style={{ marginTop: "20px" }}>
+                  <NavLink to={"/login"}>
+                    <button style={{ marginTop: "20px" }} onClick={changeLogin}>
                       <RiUser3Line />
                       <span>JOBSEEKER LOGIN</span>
                     </button>

@@ -103,14 +103,23 @@ const JobDetails = ({ details }) => {
           <span className="gray-color">Skills</span> : Data Entry , Back Office
           , Non voice , Backend , Back Office Executive , Office Assistant ,{" "}
         </div>
-        <NavLink
-          to={`/Apply/${details.title}`}
+        {/* <NavLink
+          // to={`/Apply/${details.title}`}
           style={{ textDecoration: "none" }}
+        > */}
+        <Button
+          variant="outlined"
+          color="primary"
+          onClick={(e) => {
+            // e.target.style.backgroundColor = "green";
+            e.target.style.color = "green";
+            e.target.innerHTML = "APPLIED";
+            alert("Successfully applied for this job");
+          }}
         >
-          <Button variant="outlined" color="primary">
-            Apply
-          </Button>
-        </NavLink>
+          Apply
+        </Button>
+        {/* </NavLink> */}
       </DetailsDiv>
     </Paper>
   );

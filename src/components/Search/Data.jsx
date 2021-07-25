@@ -4,6 +4,7 @@ const allJobsTitle = [];
 const allJobs = [];
 const allCities = [];
 const years = [];
+const loginData = [];
 // let uniqueTitles = {};
 
 axios
@@ -41,10 +42,21 @@ axios
   })
   .catch((e) => console.log(e));
 
+//Profile
+axios
+  .get("http://localhost:3001/login")
+  .then(({ data }) => {
+    data.forEach((element) => {
+      loginData.push(element);
+    });
+    console.log(loginData);
+  })
+  .catch((e) => console.log(e));
+
 //Years
 
 for (let i = 0; i <= 50; i++) {
   i < 2 ? years.push(i + " year") : years.push(i + " years");
 }
 
-export { allJobsTitle, allCities, years, allJobs };
+export { allJobsTitle, allCities, years, allJobs, loginData };

@@ -24,7 +24,9 @@ const SearchBarDiv = styled.div`
 export default function SearchResults() {
   const [showData, setShowData] = useState([]);
   const [page, setPage] = useState(1);
+
   const p1 = useParams();
+
   if (p1.query === "undefined") p1.query = "";
   if (p1.location === "undefined") p1.location = "";
 
@@ -40,6 +42,7 @@ export default function SearchResults() {
           return el.location.toLowerCase().includes(p1.location.toLowerCase());
         })
     );
+    setPage(1);
   }, [p1]);
 
   console.log(p1);
@@ -78,8 +81,8 @@ export default function SearchResults() {
         )}
         <SearchLinks />
       </SearchArea>
-      <hr/>
-      <Footer/>
+      <hr />
+      <Footer />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FiUser, FiPhone, FiMail, FiInstagram } from "react-icons/fi";
 import { SiFacebook } from "react-icons/si";
 import { AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai";
+import { NavLink } from "react-router-dom";
 
 const MainBox = styled.div`
   padding: 0px;
@@ -198,7 +199,7 @@ export function SignUp() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData),
-    });
+    }).then(() => localStorage.setItem("loginStatus", "true"));
     setFormData(formData);
   };
 
@@ -237,7 +238,7 @@ export function SignUp() {
           </div>
           <hr />
         </UpperPart>
-        <LowerPart onSubmit={submit}>
+        <LowerPart onSubmit={submit} action="/">
           <label htmlFor="file">
             Upload Resume (*.doc, *.docx, *.rtf, *.txt, *.pdf) 6 MB max
             <br />
@@ -362,7 +363,9 @@ export function SignUp() {
             Policy and default mailer and communications settings governing the
             use of monsterindia.com.
           </p>
-          <input type="submit" value="Next: Start Applying Now >" />
+          {/* <NavLink to={"/"}> */}
+            <input type="submit" value="Next: Start Applying Now >" />
+          {/* </NavLink> */}
         </LowerPart>
       </CreateForm>
       <Footer>

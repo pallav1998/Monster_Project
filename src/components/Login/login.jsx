@@ -4,7 +4,8 @@ import styled from "styled-components";
 import { SiFacebook } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 import { FaUserAlt, FaLock } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, Redirect } from "react-router-dom";
+import { loginData } from "../Search/Data";
 
 const MainBox = styled.div`
   padding: 0px;
@@ -115,7 +116,6 @@ const LeftSide = styled.div`
       }
     }
   }
- 
 `;
 const RightSide = styled.form`
   /* border: 2px solid blue; */
@@ -123,7 +123,7 @@ const RightSide = styled.form`
   width: 20vw;
   height: 68vh;
   margin-left: 5vw;
-  font-family: poppins-bold-webfont;
+  font-family: poppins;
   font-weight: 400;
   box-shadow: 2px 2px 20px 0 gray;
   min-width: 300px;
@@ -258,7 +258,7 @@ export function Login() {
 
   useEffect(() => {
     DataFetch();
-  });
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
@@ -267,13 +267,31 @@ export function Login() {
     setFormData({ ...formData, [name]: value });
   };
 
+  const [isLoggedIn, setIsloggedIn] = useState(false);
+
+  // localStorage.setItem("loggedin", JSON.stringify("0"));
+
   const submit = (e) => {
     e.preventDefault();
-    console.log("Button Clicked");
+    console.log(loginData, formData);
+    loginData.forEach((el) => {
+      if (el.name === formData.name) {
+        if (el.password === formData.password) {
+          localStorage.setItem("loggedin", JSON.stringify("1"));
+          console.log(isLoggedIn);
+          setIsloggedIn(true);
+        }
+      }
+    });
   };
+
+  // let x = JSON.parse(localStorage.getItem("loggedIn"));
+
+  // if(x) setIsloggedIn(true);
 
   return (
     <MainBox>
+      {isLoggedIn && <Redirect to={"/"} />}
       <NavBar>
         <img
           src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg"
@@ -320,7 +338,7 @@ export function Login() {
             <p>Save time and effort with Monster Quick Apply</p>
           </div>
         </LeftSide>
-        <RightSide onSubmit={submit}>
+        <RightSide onSubmit={submit} action="../body/home">
           <div>
             <h3>Hello!</h3>
             <h1>Welcome Back</h1>
@@ -361,7 +379,9 @@ export function Login() {
             <FcGoogle />
           </div>
           <hr />
-          <NavLink to={'/signup'}><button>New to Monster? Sign Up</button></NavLink>
+          <NavLink to={"/signup"}>
+            <button>New to Monster? Sign Up</button>
+          </NavLink>
         </RightSide>
       </Box>
     </MainBox>

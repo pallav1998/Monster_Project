@@ -7,11 +7,11 @@ const useStyle = makeStyles({
     border: 0,
     borderBlockColor: 0,
     color: "white",
-    fontSize: "0.70rem",
-    margin: "1rem 0 -1rem 0",
+    fontSize: "1.1rem",
+    margin: "1rem 0 -3rem 0",
   },
   buttons: {
-      display: "flex",
+    display: "flex",
     flexDirection: "row",
   },
   btnRed: (props) => {
@@ -33,8 +33,8 @@ export function JobsSelect() {
   return (
     <div>
       {btns.map((el) => (
-        <NavLink to={`/SearchResults/${el}`} style={{ textDecoration: "none" }}>
-          <Button className={classes.btn}>{el}</Button>
+        <NavLink to={`/SearchResults/ / `} style={{ textDecoration: "none" }}>
+          <Button className={classes.btn} btnRed={el}>{el}</Button>
         </NavLink>
       ))}
     </div>
