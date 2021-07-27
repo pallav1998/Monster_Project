@@ -15,7 +15,10 @@ After cloning this repo do
 npm install
 ```
 ```
-npm install  axios react-router-dom material-ui/@core @material-ui/icons
+npm install axios react-router-dom material-ui/@core @material-ui/icons styled-components json-server
+```
+```
+json-server in.json --port 3001
 ```
 
 ### Pages Designed:
@@ -32,6 +35,7 @@ npm install  axios react-router-dom material-ui/@core @material-ui/icons
 4. React Icons
 5. Axios
 6. React-Router DOM
+7. json-server
 
 ### Team members:-
 #### Pallav Jain(nj2_151) [View GitHub profile](https://github.com/pallav1998)
