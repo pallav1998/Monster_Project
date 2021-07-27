@@ -1,9 +1,11 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { FcGoogle } from "react-icons/fc";
-import { FiUser, FiPhone, FiMail, FiInstagram } from "react-icons/fi";
+import { FiUser } from "react-icons/fi";
 import { SiFacebook } from "react-icons/si";
-import { AiFillLinkedin, AiFillTwitterCircle } from "react-icons/ai";
+import { FaPhoneSquareAlt, FaEnvelope, FaTwitterSquare } from "react-icons/fa";
+
+import { GrInstagram, GrLinkedin, GrFacebook } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 
 const MainBox = styled.div`
@@ -11,18 +13,21 @@ const MainBox = styled.div`
   margin: 0px;
   font-family: roboto-medium-webfont;
   font-weight: 400;
+  background-color: white;
 `;
 
 const NavBar = styled.div`
-  height: 70px;
+  height: 72px;
   width: 100vw;
-  border-bottom: 1px solid cyan;
+  /* border-bottom: 1px solid cyan; */
   display: flex;
+  box-shadow: 0 1px 5px gray;
 
   img {
-    margin-left: 185px;
-    width: 8%;
-    margin-right: 50vw;
+    height: 70px;
+    margin-left: 190px;
+    width: 12%;
+    margin-right: 56vw;
   }
   button {
     border: 1px solid #3c3c3c;
@@ -30,17 +35,18 @@ const NavBar = styled.div`
     box-shadow: unset;
     color: #3c3c3c;
     padding: 8px;
-    margin-top: 10px;
+    margin-top: 8px;
+    margin-bottom: 5px;
   }
   button:hover {
-    background-color: green;
+    background-color: #e79702;
+    border-radius: 5px;
     color: white;
     cursor: pointer;
   }
   p {
-    margin-top: 3px;
     color: #5d4da8;
-    font-size: 13px;
+    font-size: 15px;
     text-align: center;
     margin: 0%;
   }
@@ -56,6 +62,7 @@ const CreateForm = styled.div`
 const UpperPart = styled.div`
   /* border: 2px solid black; */
   text-align: center;
+  font-family: "poppins";
 
   div:nth-child(1) {
     display: flex;
@@ -64,6 +71,7 @@ const UpperPart = styled.div`
   div:nth-child(1) > h1 {
     margin: 0px;
     margin-left: 120px;
+    font-size: 30px;
   }
   div:nth-child(1) > p {
     font-size: 18px;
@@ -98,6 +106,7 @@ const UpperPart = styled.div`
       width: 22px;
       height: 22px;
       margin-right: 8px;
+      color: blue;
       /* border-radius: 50%; */
     }
   }
@@ -115,8 +124,9 @@ const UpperPart = styled.div`
 `;
 
 const LowerPart = styled.form`
-  font-family: poppins-bold-webfont;
+  font-family: poppins;
   font-weight: 400;
+  text-align: left;
   input {
     width: 100%;
     height: 40px;
@@ -152,10 +162,11 @@ const LowerPart = styled.form`
 `;
 
 const Footer = styled.div`
-  width: 100vw;
-  height: 130px;
-  background-color: #f6e2f6;
-  margin-top: 50px;
+  width: 95.5%;
+  height: auto;
+  border-top: 1px solid #c0c0c0;
+  margin-top: 30px;
+  padding: 30px;
 
   hr {
     width: 85%;
@@ -168,15 +179,24 @@ const Footer = styled.div`
     display: flex;
     flex-direction: row;
     text-align: center;
+
     select {
       width: 150px;
-      height: 30px;
+      height: 35px;
+      margin-right: 50px;
+    }
+    p {
+      margin: -2px 120px 0px 0px;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      font-family: "poppins";
+    }
+    span {
+      color: #5d4da8;
     }
     svg {
-      width: 32px;
-      height: 32px;
-      margin-right: 20px;
-      margin-top: 12px;
+      margin-left: 30px;
+      font-size: 25px;
       cursor: pointer;
     }
   }
@@ -201,15 +221,19 @@ export function SignUp() {
       body: JSON.stringify(formData),
     }).then(() => localStorage.setItem("loginStatus", "true"));
     setFormData(formData);
+
+    alert("Registration Succesfull!!");
   };
 
   return (
     <MainBox>
       <NavBar>
-        <img
-          src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg"
-          alt="logo"
-        />
+        <NavLink to={"/"}>
+          <img
+            src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg"
+            alt="logo"
+          />
+        </NavLink>
         <div className="btn">
           <button>
             <FiUser /> JOBSEEAKER LOGIN
@@ -239,7 +263,7 @@ export function SignUp() {
           <hr />
         </UpperPart>
         <LowerPart onSubmit={submit} action="/">
-          <label htmlFor="file">
+          {/* <label htmlFor="file">
             Upload Resume (*.doc, *.docx, *.rtf, *.txt, *.pdf) 6 MB max
             <br />
             <input
@@ -249,7 +273,7 @@ export function SignUp() {
               placeholder=""
             />
           </label>
-          <br />
+          <br /> */}
           <label htmlFor="name">
             Full Name *
             <br />
@@ -364,37 +388,47 @@ export function SignUp() {
             use of monsterindia.com.
           </p>
           {/* <NavLink to={"/"}> */}
-            <input type="submit" value="Next: Start Applying Now >" />
+          <input type="submit" value="Register" />
           {/* </NavLink> */}
         </LowerPart>
       </CreateForm>
       <Footer>
         <div>
           <div>
-            <div>
-              <select name="country" onChange={handleChange}>
-                <option value="India">India</option>
-                <option value="USA">USA</option>
-                <option value="Canada">Canada</option>
-                <option value="Singapore">Singapore</option>
-                <option value="Thailand">Thailand</option>
-                <option value="Malaysia">Malaysia</option>
-              </select>
-            </div>
-            <div>
-              <FiPhone />
-              <p>Toll No: +91-40-66116611 </p>
-            </div>
-            <div>
-              <FiMail />
-              <p>info@monsterindia.com</p>
-            </div>
-            <div>
-              <FiInstagram />
-              <AiFillLinkedin />
-              <AiFillTwitterCircle />
-              <SiFacebook />
-            </div>
+            <select>
+              <option value="India">India</option>
+              <option value="USA">USA</option>
+              <option value="Canada">Canada</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Thailand">Thailand</option>
+              <option value="Malaysia">Malaysia</option>
+            </select>
+            <p>
+              <span>
+                <FaPhoneSquareAlt />
+              </span>{" "}
+              Toll No: +91-40-66116611 <br />
+              Toll Free No: 1-800-4196666
+            </p>
+            <p>
+              {" "}
+              <span>
+                <FaEnvelope />
+              </span>{" "}
+              info@monsterindia.com
+            </p>
+            <span>
+              <GrInstagram />
+            </span>
+            <span>
+              <GrLinkedin />
+            </span>
+            <span>
+              <FaTwitterSquare />
+            </span>
+            <span>
+              <GrFacebook />
+            </span>
           </div>
           <hr />
           <div>

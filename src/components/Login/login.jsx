@@ -1,5 +1,5 @@
-// import { SignUp } from "./signup";
 import { useState, useEffect } from "react";
+import { Footer } from "../body/footer";
 import styled from "styled-components";
 import { SiFacebook } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
@@ -10,17 +10,23 @@ import { loginData } from "../Search/Data";
 const MainBox = styled.div`
   padding: 0px;
   margin: 0px;
+  button {
+    border-radius: 5px;
+  }
 `;
 
 const NavBar = styled.div`
   height: 70px;
   width: 100vw;
-  border-bottom: 1px solid cyan;
+  /* border-bottom: 1px solid cyan; */
   display: flex;
+  box-shadow: 0 1px 8px 0 gray;
+  margin-bottom: 20px;
 
   img {
+    height: 70px;
     margin-left: 190px;
-    width: 8%;
+    width: 12%;
     margin-right: 56vw;
   }
   button {
@@ -51,10 +57,11 @@ const Box = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
+  margin-bottom: 140px;
 `;
 
 const LeftSide = styled.div`
-  width: 40vw;
+  width: 30vw;
   overflow: hidden;
   padding: 10px 0 0 10px;
   display: flex;
@@ -120,8 +127,8 @@ const LeftSide = styled.div`
 const RightSide = styled.form`
   /* border: 2px solid blue; */
   padding: 20px;
-  width: 20vw;
-  height: 68vh;
+  width: 30vw;
+  height: 36vw;
   margin-left: 5vw;
   font-family: poppins;
   font-weight: 400;
@@ -180,6 +187,7 @@ const RightSide = styled.form`
       border: 1px solid #6c54da;
       color: white;
       font-size: medium;
+      border-radius: 5px;
     }
     input[type="submit"]:hover {
       background: #2d159b;
@@ -258,6 +266,7 @@ export function Login() {
 
   useEffect(() => {
     DataFetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleChange = (e) => {
@@ -293,10 +302,12 @@ export function Login() {
     <MainBox>
       {isLoggedIn && <Redirect to={"/"} />}
       <NavBar>
-        <img
-          src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg"
-          alt="logo"
-        />
+        <NavLink to={"/"}>
+          <img
+            src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg"
+            alt="logo"
+          />
+        </NavLink>
         <div className="btn">
           <button>Login as Employer instead</button>
         </div>
@@ -384,6 +395,8 @@ export function Login() {
           </NavLink>
         </RightSide>
       </Box>
+
+      <Footer />
     </MainBox>
   );
 }
