@@ -51,3 +51,5 @@ json-server in.json --port 3001
 ![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture1.PNG)
 ## Job Search Page
 ![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture3.PNG)
+
+I want to take this opportunity to thank you for visiting here.
