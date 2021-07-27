@@ -16,6 +16,7 @@ export function Nav() {
   useEffect(() => {
     if (x === "1") setLogin(true);
     else setLogin(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [show, setShow] = React.useState(0);

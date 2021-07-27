@@ -105,7 +105,7 @@ div {
 .login {
   color: black;
 }
-.login > button {
+.login button {
   width: 170px;
   height: 35px;
   border: 1px solid black;
@@ -115,7 +115,7 @@ div {
   background-color: #f5f5f5;
   margin-left: 10px;
 }
-.login > button:hover {
+.login button:hover {
   color: white;
   background-color: rgb(177, 115, 0);
   border: none;
@@ -531,6 +531,11 @@ div {
   color: white;
   font-family: "poppins";
   padding: 15px;
+}
+
+.footer_info li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .footer_info li {
   list-style: none;
