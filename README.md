@@ -9,6 +9,15 @@ We have created the clone of monsterindia.com with all it's main functions like-
 3. JavaScript
 4. HTML
 
+### Install the packages
+After cloning this repo do
+```
+npm install
+```
+```
+npm install  axios react-router-dom material-ui/@core @material-ui/icons
+```
+
 ### Pages Designed:
 1. Landing Page
 2. Login Page
@@ -24,18 +33,17 @@ We have created the clone of monsterindia.com with all it's main functions like-
 5. Axios
 6. React-Router DOM
 
-### Screenshots
-
-##Landing Page
-![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture.PNG)
-##Footer
-![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture2.PNG)
-##Login Page
-![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture1.PNG)
-##Job Search Page
-![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture3.PNG)
-
 ### Team members:-
 #### Pallav Jain(nj2_151) [View GitHub profile](https://github.com/pallav1998)
 #### Rohit Gupta(nj2_024) [View GitHub profile](https://github.com/rohitkumar0427)
 #### Vamsi Gudivada(nj2_132) [View GitHub profile](https://github.com/vamsinagendra2)
+
+### Screenshots
+## Landing Page
+![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture.PNG)
+## Footer
+![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture2.PNG)
+## Login Page
+![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture1.PNG)
+## Job Search Page
+![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture3.PNG)
