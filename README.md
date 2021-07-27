@@ -7,6 +7,7 @@ We have created the clone of monsterindia.com with all it's main functions like-
 ![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture.PNG)
 ![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture2.PNG)
 ![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture1.PNG)
+![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture3.PNG)
 
 ### Team members:-
 #### Pallav Jain(nj2_151) [View GitHub profile](https://github.com/pallav1998)
