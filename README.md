@@ -42,7 +42,7 @@ json-server in.json --port 3001
 #### Rohit Gupta(nj2_024) [View GitHub profile](https://github.com/rohitkumar0427)
 #### Vamsi Gudivada(nj2_132) [View GitHub profile](https://github.com/vamsinagendra2)
 
-### Screenshots
+# Screenshots
 ## Landing Page
 ![alt text](https://github.com/pallav1998/Monster_Project/blob/master/screenshort/Capture.PNG)
 ## Footer
