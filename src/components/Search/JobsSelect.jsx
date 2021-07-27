@@ -34,7 +34,9 @@ export function JobsSelect() {
     <div>
       {btns.map((el) => (
         <NavLink to={`/SearchResults/ / `} style={{ textDecoration: "none" }}>
-          <Button className={classes.btn} btnRed={el}>{el}</Button>
+          <Button className={classes.btn} btnRed={el}>
+            {el}
+          </Button>
         </NavLink>
       ))}
     </div>

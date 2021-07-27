@@ -4,8 +4,8 @@ import { GiTwoCoins } from "react-icons/gi";
 import { BsBriefcaseFill } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { Paper } from "@material-ui/core";
-import "./JobDetails.module.css";
-import { NavLink } from "react-router-dom";
+// import "./JobDetails.module.css";
+// import { NavLink } from "react-router-dom";
 import { Button } from "@material-ui/core";
 
 // import { createTheme, ThemeProvider } from "@material-ui/core/styles";
@@ -14,7 +14,7 @@ import { Button } from "@material-ui/core";
 //   typography: {
 //     fontSize: 6,
 //   },
-// });
+// })
 
 const DetailsDiv = styled.div`
   display: flex;
@@ -24,6 +24,7 @@ const DetailsDiv = styled.div`
   background-color: white;
   font-family: "Poppins", sans-serif;
   padding: 1rem;
+  background-color: #f5f5f5;
   margin: 2rem 0;
   color: #000000;
   .medium-Font {
@@ -114,7 +115,9 @@ const JobDetails = ({ details }) => {
             // e.target.style.backgroundColor = "green";
             e.target.style.color = "green";
             e.target.innerHTML = "APPLIED";
-            alert("Successfully applied for this job");
+            setTimeout(() => {
+              alert("Successfully applied for this job");
+            }, 2000);
           }}
         >
           Apply
