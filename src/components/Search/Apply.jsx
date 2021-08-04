@@ -2,9 +2,7 @@ import { useParams } from "react-router-dom";
 
 export default function Apply() {
   const jobTitle = useParams();
-
   let isLoggedIn = localStorage.getItem("isLoggedIn");
-
   isLoggedIn = true;
 
   return (

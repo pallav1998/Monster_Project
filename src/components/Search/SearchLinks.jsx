@@ -19,7 +19,6 @@ const RelatedSearchWrapper = styled.div`
 
 export function SearchLinks() {
   const cities = [];
-
   for (let i = 0; i < 25; i++) {
     cities.push(allCities[Math.floor(Math.random() * allCities.length)]);
   }

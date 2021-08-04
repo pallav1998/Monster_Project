@@ -15,10 +15,10 @@ axios
     });
   })
   .catch((err) => {
-    console.error(err);
+    // console.error(err);
   });
 
-//   console.log(allJobs);
+  // console.log(allJobs);
 
 // Jobs Data
 axios
@@ -29,7 +29,7 @@ axios
     });
   })
   .catch((err) => {
-    console.error(err);
+    // console.error(err);
   });
 
 // Cities Data
@@ -40,8 +40,6 @@ axios
       allCities.push(element.city);
     });
   })
-  .catch((e) => console.log(e));
-
 //Profile
 axios
   .get("http://localhost:3001/login")
@@ -51,7 +49,6 @@ axios
     });
     console.log(loginData);
   })
-  .catch((e) => console.log(e));
 
 //Years
 

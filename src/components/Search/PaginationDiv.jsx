@@ -53,14 +53,6 @@ export function PaginationDiv({ showData, setPage, handleSort, searchData }) {
             ))}
           </Select>
         </div>
-        {/* <div className="filter">
-        <div>Sort By:</div>
-        <Select className="sortBy" onChange={handleSort}>
-          {sortBy.map((el) => (
-            <option value={el}>{el}</option>
-          ))}
-        </Select>
-      </div> */}
       </PageDiv>
     </Paper>
   );

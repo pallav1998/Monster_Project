@@ -1,20 +1,9 @@
 import styled from "styled-components";
-// import { Typography } from "@material-ui/core";
 import { GiTwoCoins } from "react-icons/gi";
 import { BsBriefcaseFill } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import { Paper } from "@material-ui/core";
-// import "./JobDetails.module.css";
-// import { NavLink } from "react-router-dom";
 import { Button } from "@material-ui/core";
-
-// import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-
-// const theme = createTheme({
-//   typography: {
-//     fontSize: 6,
-//   },
-// })
 
 const DetailsDiv = styled.div`
   display: flex;
@@ -104,15 +93,10 @@ const JobDetails = ({ details }) => {
           <span className="gray-color">Skills</span> : Data Entry , Back Office
           , Non voice , Backend , Back Office Executive , Office Assistant ,{" "}
         </div>
-        {/* <NavLink
-          // to={`/Apply/${details.title}`}
-          style={{ textDecoration: "none" }}
-        > */}
         <Button
           variant="outlined"
           color="primary"
           onClick={(e) => {
-            // e.target.style.backgroundColor = "green";
             e.target.style.color = "green";
             e.target.innerHTML = "APPLIED";
             setTimeout(() => {
@@ -122,7 +106,6 @@ const JobDetails = ({ details }) => {
         >
           Apply
         </Button>
-        {/* </NavLink> */}
       </DetailsDiv>
     </Paper>
   );

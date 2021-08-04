@@ -1,8 +1,6 @@
 import styles from "./home.module.css";
-
 import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
 import { Fragment } from "react";
-
 import { v4 as uuid } from "uuid";
 
 function Jobinfo({ ele }) {

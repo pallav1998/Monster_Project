@@ -1,7 +1,5 @@
 import styles from "./home.module.css";
 import React from "react";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { AiOutlineDashboard } from "react-icons/ai";
 import { FaBell, FaUserCircle } from "react-icons/fa";
 import { RiUser3Line } from "react-icons/ri";
@@ -11,7 +9,7 @@ import { useEffect } from "react";
 export function Nav() {
   const [login, setLogin] = React.useState(false);
   const x = JSON.parse(localStorage.getItem("loggedin"));
-  console.log(x);
+  // console.log(x);
 
   useEffect(() => {
     if (x === "1") setLogin(true);
@@ -22,7 +20,7 @@ export function Nav() {
   const [show, setShow] = React.useState(0);
 
   const dropdown = (a) => {
-    console.log(a);
+    // console.log(a);
     setShow(a);
   };
   const hide = () => {

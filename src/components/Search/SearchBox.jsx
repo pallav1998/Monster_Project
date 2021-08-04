@@ -11,10 +11,6 @@ const SearchBoxDiv = styled.div`
   padding: 0.5rem;
   height: 300px;
   position: relative;
-  /* align-items: center; */
-  /* top: 180px;
-  left: 75px; */
-  /* z-index: -1; */
   margin: ${(props) => (props.margin ? "auto" : "")};
   .searchBar {
     margin: 2rem;

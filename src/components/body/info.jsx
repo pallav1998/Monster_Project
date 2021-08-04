@@ -1,12 +1,6 @@
 import styles from "./home.module.css";
-
-// import { CgChevronLeft, CgChevronRight } from "react-icons/cg";
-// import { Fragment } from 'react';
-
 import { Findjobs } from "./findjobs.jsx";
-
 import { Jobdiv } from "./job";
-
 import { Joblinks } from "./joblinks";
 
 const wfh = [
