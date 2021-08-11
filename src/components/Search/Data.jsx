@@ -5,7 +5,6 @@ const allJobs = [];
 const allCities = [];
 const years = [];
 const loginData = [];
-// let uniqueTitles = {};
 
 axios
   .get("http://localhost:3001/jobs")
@@ -15,10 +14,8 @@ axios
     });
   })
   .catch((err) => {
-    // console.error(err);
+     console.error(err);
   });
-
-  // console.log(allJobs);
 
 // Jobs Data
 axios

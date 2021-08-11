@@ -30,8 +30,6 @@ export default function SearchResults() {
   if (p1.query === "undefined") p1.query = "";
   if (p1.location === "undefined") p1.location = "";
 
-  // console.log(p1);
-
   useEffect(() => {
     setShowData(
       allJobs
@@ -44,8 +42,6 @@ export default function SearchResults() {
     );
     setPage(1);
   }, [p1]);
-
-  // console.log(p1);
 
   const handleSort = (e) => {
     if (e.target.value === "Freshness") {

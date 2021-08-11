@@ -91,7 +91,6 @@ export default function SearchBar({ handleFocus, show }) {
   };
 
   const handleFormData = (el, ref) => {
-    // console.log(ref);
     setShowTitle(false);
     setShowCities(false);
     ref.current.value = el;
