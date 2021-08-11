@@ -9,25 +9,21 @@ import { useEffect } from "react";
 export function Nav() {
   const [login, setLogin] = React.useState(false);
   const x = JSON.parse(localStorage.getItem("loggedin"));
-  // console.log(x);
 
   useEffect(() => {
     if (x === "1") setLogin(true);
     else setLogin(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [show, setShow] = React.useState(0);
 
   const dropdown = (a) => {
-    // console.log(a);
     setShow(a);
   };
   const hide = () => {
     setShow(0);
   };
   const changeLogin = () => {
-    //   setLogin(true);
   };
 
   return (
