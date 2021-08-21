@@ -27,7 +27,6 @@ export function PaginationDiv({ showData, setPage, handleSort, searchData }) {
   const noOfPages = Math.ceil(showData.length / 10);
   console.log(noOfPages);
   const pages = [];
-  //   const sortBy = ["Relevance", "Freshness"];
   for (let i = 1; i <= noOfPages; i++) pages.push(i);
 
   const handleOnChange = (e) => {

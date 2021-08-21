@@ -27,7 +27,6 @@ const SearchBoxDiv = styled.div`
   .trendingSearch > div:first-child {
     display: flex;
     flex-wrap: nowrap;
-    /* width:300px; */
     font-weight: 900;
   }
   .advancedSearch {
